@@ -5,6 +5,7 @@ import Hero from '../ChefService/ChefService';
 import ChefService from '../ChefService/ChefService';
 import PopularMenu from '../PopularMenu/PopularMenu';
 import CallUs from '../CallUs/CallUs';
+import ChefRecommends from '../ChefRecommends/ChefRecommends';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
            <ChefService></ChefService>
            <PopularMenu></PopularMenu>
            <CallUs></CallUs>
+           <ChefRecommends></ChefRecommends>
         </>
     );
 };
