@@ -31,6 +31,9 @@ const PopularMenu = () => {
                     ></MenuItem>)
                 }
             </div>
+                <hr className='mx-auto w-20 mt-12' />
+            <button className="my-8 btn bg-[#332FD0] justify-center border-none text-white border-b-4 mx-auto flex items-center">See More View</button>
+
         </section>
     );
 };

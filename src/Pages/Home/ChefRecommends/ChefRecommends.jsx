@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
-import cardImg from '../../../assets/home/slide1.jpg'
+import cardImg from '../../../assets/home/ChefRecom.jpg'
 const ChefRecommends = () => {
     const CardItems = <>
         <div className="card w-96 bg-base-100 shadow-xl">
