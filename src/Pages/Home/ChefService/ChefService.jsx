@@ -3,7 +3,7 @@ import BackgroundImg from '../../../assets/home/chef-service.jpg'
 const Hero = () => {
     return (
         <>
-            <div className="my-3 hero min-h-screen" style={{ backgroundImage: `url(${BackgroundImg})` }}>
+            <div className="my-12 hero min-h-screen" style={{ backgroundImage: `url(${BackgroundImg})` }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="bg-white px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">

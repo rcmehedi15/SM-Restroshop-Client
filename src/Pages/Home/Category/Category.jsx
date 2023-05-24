@@ -18,7 +18,7 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 
 
 
-const Catagory = () => {
+const Category = () => {
     return (
 
         <>
@@ -63,4 +63,4 @@ const Catagory = () => {
     );
 };
 
-export default Catagory;
+export default Category;
