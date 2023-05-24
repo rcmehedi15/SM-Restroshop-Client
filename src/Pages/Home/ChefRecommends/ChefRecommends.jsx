@@ -4,12 +4,12 @@ import cardImg from '../../../assets/home/slide1.jpg'
 const ChefRecommends = () => {
     const CardItems = <>
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={cardImg} className="w-96 "/></figure>
+            <figure><img src={cardImg} className="w-96 " /></figure>
             <div className="card-body text-center">
                 <h2 className="card-title justify-center">Caeser Salad</h2>
                 <p>Letttuce,Eggs,Permesan ,Chesase ,Chiken ,Brease Filiects</p>
                 <div className="card-actions justify-center">
-                    <button className="btn bg-[#332FD0] border-none text-white">ADD TO CART</button>
+                    <button className="btn bg-[#332FD0] border-none text-white  border-b-4">ADD TO CART</button>
                 </div>
             </div>
         </div>
