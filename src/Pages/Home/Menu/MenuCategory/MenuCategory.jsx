@@ -4,10 +4,10 @@ import Cover from '../../../Shared/Cover/Cover';
 
 const MenuCategory = ({items,title,img}) => {
     return (
-        <div>
-            {title && <Cover img={img} title="Our Menu"></Cover>}
+        <div className='pt-8'>
+            {title && <Cover img={img} title={title}></Cover>}
 
-             <div className='container mx-auto grid md:grid-cols-2 gap-4'>
+             <div className='container mx-auto grid md:grid-cols-2 gap-10 my-16'>
                 {
                     items.map(item => <MenuItem
                         key={item._id}
