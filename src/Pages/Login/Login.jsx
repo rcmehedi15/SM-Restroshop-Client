@@ -7,7 +7,7 @@ const Login = () => {
     const captchaRef = useRef(null);
     const [disabled, setDisabled] = useState(true);
 
-    // const { signIn } = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
 
 
     useEffect(() => {
