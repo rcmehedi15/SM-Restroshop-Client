@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { app } from '../Firebase/Firebase.config';
 
 export const AuthContext = createContext(null);
@@ -10,33 +10,39 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
     const [loading, setloading] = useState(true);
 
-    const createUser = (email,password) => {
+    const createUser = (email, password) => {
         setloading(true);
-        return createUserWithEmailAndPassword(auth,email,password)
+        return createUserWithEmailAndPassword(auth, email, password)
     }
-    const signIn = (email,password) => {
+    const signIn = (email, password) => {
         setloading(true);
-        return signInWithEmailAndPassword(auth,email,password)
+        return signInWithEmailAndPassword(auth, email, password)
     }
-    const logOut = (email,password) => {
+    const logOut = (email, password) => {
         setloading(true);
         return signOut(auth)
     }
+    const updateUserProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+        });
+    }
 
     useEffect(() => {
-        const unsubscribe =  onAuthStateChanged(auth,currentUser =>{
-           setUser(currentUser);
-            console.log('current user',currentUser);
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
+            console.log('current user', currentUser);
             setloading(false)
         });
         return unsubscribe();
-    },[])
+    }, [])
     const authInfo = {
         user,
         loading,
         createUser,
         signIn,
         logOut,
+        updateUserProfile
     }
 
     return (
