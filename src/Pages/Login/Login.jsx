@@ -26,11 +26,11 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 Swal.fire({
-                    position: 'top-end',
+                   
                     icon: 'success',
                     title: 'Log In Successed!',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 2500
                 });
                 navigate(from, { replace: true });
             });
@@ -79,7 +79,7 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
 
-                                <input disabled={disabled} className="btn bg-[#332FD0] border-none" type="submit" value="Login" />
+                                <input disabled={false} className="btn bg-[#332FD0] border-none" type="submit" value="Login" />
                             </div>
                         </form>
                         <p className='mb-6 text-center'><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
