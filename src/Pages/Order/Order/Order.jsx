@@ -28,7 +28,7 @@ const Order = () => {
                 <title>SM RESTRO SHOP | ORDER</title>
             </Helmet>
             <Cover title="Order Food" img={orderCoverImg}></Cover>
-            <div className='text-center my-8'>
+            <div className=' text-center my-8'>
                 <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <TabList>
                         <Tab>Salad</Tab>
@@ -38,7 +38,8 @@ const Order = () => {
                         <Tab>Drinks</Tab>
 
                     </TabList>
-                    <TabPanel>
+                   <div className='container mx-auto my-8d'>
+                   <TabPanel>
                       <OrderTab items={salad}></OrderTab>
                     </TabPanel>
                     <TabPanel>
@@ -57,6 +58,7 @@ const Order = () => {
                       <OrderTab items={drinks}></OrderTab>
 
                     </TabPanel>
+                   </div>
                 </Tabs>
             </div>
         </div>

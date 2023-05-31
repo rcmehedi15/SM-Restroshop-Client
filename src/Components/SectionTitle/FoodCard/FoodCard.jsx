@@ -54,7 +54,7 @@ const FoodCard = ({ item }) => {
 
     return (
         <>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className=" card w-96 bg-base-100 shadow-xl">
                 <img src={image} alt="Shoes" className='h-64' />
                 <p className="absolute  mr-4 mt-4 px-4 bg-[#393950] text-white">${price}</p>
                 <div className="card-body flex flex-col items-center">
