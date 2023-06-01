@@ -12,19 +12,19 @@ import { Helmet } from 'react-helmet-async';
 const Home = () => {
     return (
         <>
-        <Helmet>
+            <Helmet>
                 <title>
                     Home | SM RESTRO SHOP
                 </title>
             </Helmet>
-           <Banner></Banner>
-           <Catagory></Catagory>
-           <ChefService></ChefService>
-           <PopularMenu></PopularMenu>
-           <CallUs></CallUs>
-           <ChefRecommends></ChefRecommends>
-           <Featured></Featured>
-           <Testimonials></Testimonials>
+            <Banner></Banner>
+            <Catagory></Catagory>
+            <ChefService></ChefService>
+            <PopularMenu></PopularMenu>
+            <CallUs></CallUs>
+            <ChefRecommends></ChefRecommends>
+            <Featured></Featured>
+            <Testimonials></Testimonials>
         </>
     );
 };
