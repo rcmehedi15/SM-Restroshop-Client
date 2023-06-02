@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { Result } from 'postcss';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Shared/SocialLogin';
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -34,7 +35,7 @@ const SignUp = () => {
                                 if (data.insertedId) {
                                     reset();
                                     Swal.fire({
-                                        
+
                                         icon: 'success',
                                         title: 'User created successfully.',
                                         showConfirmButton: false,
@@ -108,7 +109,8 @@ const SignUp = () => {
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p className='mb-6 text-center'><small>Already have an account <Link to="/login"><span className='text-orange-600'>Login</span></Link></small></p>
+                        <p className=' text-center'><small>Already have an account <Link to="/login"><span className='text-blue-600'>Login</span></Link></small></p>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
