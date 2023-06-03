@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import { FaShoppingCart, FaWallet, FaCalendar, FaHome,FaUtensils,FaBook,FaUsers   } from 'react-icons/fa';
+import { FaShoppingCart, FaWallet, FaCalendar, FaHome, FaUtensils, FaBook, FaUsers } from 'react-icons/fa';
 import useCart from '../../Hooks/useCart';
+import useAdmin from '../../Hooks/useAdmin';
 
 const Dashboard = () => {
     const [cart] = useCart();
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div className="drawer drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
