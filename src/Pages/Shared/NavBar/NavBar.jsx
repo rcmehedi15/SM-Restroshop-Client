@@ -37,7 +37,7 @@ const NavBar = () => {
         {
             user ? <>
 
-                <button className='btn btn-ghost' onClick={handleLogOut}>Logout</button>
+                <button onClick={handleLogOut}>Logout</button>
             </>
 
                 :

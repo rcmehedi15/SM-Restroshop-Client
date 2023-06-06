@@ -31,8 +31,8 @@ const Dashboard = () => {
                             :
                             <>
                                 <li><NavLink to="/dashboard/userhome"> <FaHome></FaHome>User Home</NavLink></li>
-                                <li><NavLink to="/dashboard/reservation"> <FaCalendar></FaCalendar>Reservation</NavLink></li>
-                                <li><NavLink to="/dashboard/history"> <FaWallet></FaWallet>Payment History</NavLink></li>
+                                {/* <li><NavLink to="/dashboard/reservation"> <FaCalendar></FaCalendar>Reservation</NavLink></li>
+                                <li><NavLink to="/dashboard/history"> <FaWallet></FaWallet>Payment History</NavLink></li> */}
                                 <li><NavLink to="/dashboard/mycart"> <FaShoppingCart></FaShoppingCart>My Cart
                                     <span className="bg-amber-400 badge badge-secondary">{cart?.length || 0}</span>
                                 </NavLink></li>
