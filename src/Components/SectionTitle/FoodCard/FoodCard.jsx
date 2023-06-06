@@ -4,19 +4,20 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useCart from '../../../Hooks/useCart';
+import useAdmin from '../../../Hooks/useAdmin';
 
 const FoodCard = ({ item }) => {
     const { name, image, price, recipe, _id } = item;
     const { user } = useContext(AuthContext);
-
+    const [isAdmin] = useAdmin();
     const [, refetch] = useCart();
 
     const navigate = useNavigate();
     const location = useLocation();
     const handleAddToCart = item => {
         console.log(item);
-        if (user && user.email ) {
-            const cartItem = { menuItemId: _id,name,image,price, email: user.email }
+        if (user && user.email) {
+            const cartItem = { menuItemId: _id, name, image, price, email: user.email }
             fetch('https://sm-restroshop-server.vercel.app/carts', {
                 method: 'POST',
                 headers: {
@@ -51,6 +52,15 @@ const FoodCard = ({ item }) => {
             })
         }
     }
+    const handleAddtoCartAdmin = item => {
+        Swal.fire({
+            title: 'Sorry,Admin !!!',
+            text: 'You are admin, if you buy any product then login as normal user',
+            icon: 'error',
+            confirmButtonText: 'Okay'
+          })
+    }
+ 
 
     return (
         <>
@@ -61,7 +71,12 @@ const FoodCard = ({ item }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>{recipe}</p>
                     <div className="card-actions justify-end">
-                        <button onClick={() => handleAddToCart(item)} className="btn btn-outline hover:bg-[#332FD0] mt-4">Add to Cart</button>
+                        {isAdmin ? (
+                            <button onClick={() => handleAddtoCartAdmin(item)} className="btn btn-outline hover:bg-[#332FD0] mt-4">Add To Cart</button>
+                        ) : (
+                            <button onClick={() => handleAddToCart(item)} className="btn btn-outline hover:bg-[#332FD0] mt-4">Add to Cart</button>
+                        )}
+
                     </div>
                 </div>
             </div>

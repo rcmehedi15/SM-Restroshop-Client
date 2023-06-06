@@ -22,17 +22,17 @@ const NavBar = () => {
         <li><Link to="/order/salad">Order Food</Link></li>
 
         {
-            isAdmin ? " " : <>
-                <li>
-                    <Link to='/dashboard/mycart'>
-                        <button className="btn gap-2">
-                            <FaShoppingCart />
-                            <div className="badge badge-secondary">{cart?.length || 0}</div>
-                        </button>
+           isAdmin ? " " : <> 
+            <li>
+            <Link to='/dashboard/mycart'>
+                <button className="btn gap-2">
+                    <FaShoppingCart />
+                    <div className="badge badge-secondary">{cart?.length || 0}</div>
+                </button>
 
-                    </Link>
-                </li>
-
+            </Link>
+        </li>
+            
             </>
         }
 
