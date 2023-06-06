@@ -20,15 +20,12 @@ const NavBar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Our Menu</Link></li>
         <li><Link to="/order/salad">Order Food</Link></li>
-        {
-            isAdmin ? <li><Link to="/dashboard/adminhome">Dashboard</Link></li> : 
-            <li><Link to="/dashboard/userhome">Dashboard</Link></li>
-        }
+
         <li>
             <Link to='/dashboard/mycart'>
                 <button className="btn gap-2">
-                   <FaShoppingCart />
-                    <div className="badge badge-secondary">{cart?.length || 0 }</div>
+                    <FaShoppingCart />
+                    <div className="badge badge-secondary">{cart?.length || 0}</div>
                 </button>
 
             </Link>
@@ -36,6 +33,10 @@ const NavBar = () => {
 
         {
             user ? <>
+                {
+                    isAdmin ? <li><Link to="/dashboard/adminhome">Dashboard</Link></li> :
+                        <li><Link to="/dashboard/userhome">Dashboard</Link></li>
+                }
 
                 <button onClick={handleLogOut}>Logout</button>
             </>
