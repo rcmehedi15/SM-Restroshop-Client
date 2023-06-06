@@ -31,9 +31,10 @@ const AllUsers = () => {
             }
         })
     }
-    const handleDelete = user => {
+    // TODO 
+    // const handleDelete = user => {
 
-    }
+    // }
     return (
         <div className="w-full">
             <Helmet>

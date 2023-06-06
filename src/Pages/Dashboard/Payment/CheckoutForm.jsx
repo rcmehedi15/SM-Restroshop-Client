@@ -109,11 +109,11 @@ const CheckoutForm = ({price,cart}) => {
                         },
                     }}
                 />
-                <button className='bg-[#332FD0]' type="submit" disabled={!stripe || !clientSecret || processing}>
+                <button className='bg-[#332FD0] py-2 rounded-md px-4 text-white my-4' type="submit" disabled={!stripe || !clientSecret || processing}>
                     Pay
                 </button>
             </form>
-            {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
+            {cardError && <p className="text-red-600 ">{cardError}</p>}
             {transactionId && <p className="text-green-500">Transaction complete with transactionId: {transactionId}</p>}
         </>
     );

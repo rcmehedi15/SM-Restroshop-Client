@@ -66,7 +66,7 @@ const AdminHome = () => {
                     </div>
                     <div className="stat-title">Revenue</div>
                     <div className="stat-value">${stats.revenue}</div>
-                    <div className="stat-desc">Jan 1st - Feb 1st</div>
+                   
                 </div>
 
                 <div className="stat">
@@ -75,7 +75,6 @@ const AdminHome = () => {
                     </div>
                     <div className="stat-title">New Users</div>
                     <div className="stat-value">{stats.users}</div>
-                    <div className="stat-desc">↗︎ 400 (22%)</div>
                 </div>
                 <div className="stat">
                     <div className="stat-figure text-secondary">
@@ -83,7 +82,7 @@ const AdminHome = () => {
                     </div>
                     <div className="stat-title">Menu Items</div>
                     <div className="stat-value">{stats.products}</div>
-                    <div className="stat-desc">↗︎ 400 (22%)</div>
+                  
                 </div>
 
                 <div className="stat">
@@ -92,7 +91,7 @@ const AdminHome = () => {
                     </div>
                     <div className="stat-title">Orders</div>
                     <div className="stat-value">{stats.orders}</div>
-                    <div className="stat-desc">↘︎ 90 (14%)</div>
+                    
                 </div>
 
             </div>
