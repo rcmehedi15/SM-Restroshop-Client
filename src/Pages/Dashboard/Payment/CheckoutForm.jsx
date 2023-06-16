@@ -5,6 +5,7 @@ import './CheckoutForm.css'
 import { useState } from 'react';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import useAuth from '../../../Hooks/UseAuth';
+import Swal from 'sweetalert2';
 
 const CheckoutForm = ({price,cart}) => {
     const stripe = useStripe();
@@ -83,7 +84,13 @@ const CheckoutForm = ({price,cart}) => {
              .then(res => {
                 console.log(res.data);
                 if(res.data.result.insertedId){
-                    // display confirm 
+                    Swal.fire({
+                        
+                        icon: 'success',
+                        title: 'Your Payment Done,Check Your Mail!',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                 }
              })
 
@@ -114,7 +121,8 @@ const CheckoutForm = ({price,cart}) => {
                 </button>
             </form>
             {cardError && <p className="text-red-600 ">{cardError}</p>}
-    {transactionId && <p className="text-green-500">Transaction complete with transactionId: {transactionId}</p>}
+    {transactionId && <p className="text-green-500"> TransactionId: {transactionId}</p>}
+                    
         </>
     );
 };

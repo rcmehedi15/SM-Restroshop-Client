@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://sm-restroshop-server.vercel.app', 
+    baseURL: 'http://localhost:5000/', 
   });
 
   useEffect(() => {
